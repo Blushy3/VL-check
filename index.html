@@ -1,0 +1,110 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Chamber</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(tlo.png);
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: fadeIn 3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .video-wrapper {
+            margin-bottom: 20px;
+            border: 2px solid #ff4655;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #ff4655;
+            animation: textAnimate 5s infinite;
+        }
+        @keyframes textAnimate {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ff4655;
+        }
+        th {
+            background-color: #ff4655;
+            color: white;
+        }
+        td {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .gif-wrapper {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-wrapper">
+            <video width="600" controls>
+                <source src="valorant.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <h1>Valorant Chamber First on the World Main</h1>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Kills</th>
+                <th>Deaths</th>
+                <th>Assists</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>Vincente G4asilin</td>
+                <td>999</td>
+                <td colspan="2">1</td> <!-- Scalone komórki -->
+                <td>6900</td>
+            </tr>
+            <tr>
+                <td>bot 1</td>
+                <td>18</td>
+                <td>7</td>
+                <td>5</td>
+                <td>1100</td>
+            </tr>
+            <tr>
+                <td>bot 2</td>
+                <td>15</td>
+                <td>10</td>
+                <td>6</td>
+                <td>950</td>
+            </tr>
+        </table>
+        <div class="gif-wrapper">
+            <img src="emotka.gif" alt="emotka.gif" width="200">
+        </div>
+    </div>
+</body>
+</html>
