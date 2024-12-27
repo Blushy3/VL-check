@@ -14,12 +14,17 @@
             font-family: 'Arial', sans-serif;
             color: white;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            overflow: hidden; /* Ukrycie pasków przewijania */
+        }
+        .scroll-container {
+            overflow: auto;
+            height: 100vh;
+            scrollbar-width: none; /* Ukrycie pasków przewijania w Firefox */
+        }
+        .scroll-container::-webkit-scrollbar {
+            display: none; /* Ukrycie pasków przewijania w Chrome, Safari */
         }
         .container {
-            flex: 1;
             position: relative;
             top: 50%;
             left: 50%;
@@ -71,57 +76,57 @@
             padding: 10px;
             color: white;
             text-align: center;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="video-wrapper">
-            <video width="600" controls>
-                <source src="valorant.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <div class="scroll-container">
+        <div class="container">
+            <div class="video-wrapper">
+                <video width="600" controls>
+                    <source src="valorant.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h1>Valorant Chamber First on the World Main</h1>
+            <table>
+                <tr>
+                    <th>Player</th>
+                    <th>Kills</th>
+                    <th>Deaths</th>
+                    <th>Assists</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>Vincente G4asilin</td>
+                    <td>999</td>
+                    <td colspan="2">1</td> <!-- Scalone komórki -->
+                    <td>6900</td>
+                </tr>
+                <tr>
+                    <td>bot 1</td>
+                    <td>18</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>1100</td>
+                </tr>
+                <tr>
+                    <td>bot 2</td>
+                    <td>15</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>950</td>
+                </tr>
+            </table>
+            <div class="gif-wrapper">
+                <img src="emotka.gif" alt="emotka.gif" width="200">
+            </div>
         </div>
-        <h1>Valorant Chamber First on the World Main</h1>
-        <table>
-            <tr>
-                <th>Player</th>
-                <th>Kills</th>
-                <th>Deaths</th>
-                <th>Assists</th>
-                <th>Score</th>
-            </tr>
-            <tr>
-                <td>Vincente G4asilin</td>
-                <td>999</td>
-                <td colspan="2">1</td> <!-- Scalone komórki -->
-                <td>6900</td>
-            </tr>
-            <tr>
-                <td>bot 1</td>
-                <td>18</td>
-                <td>7</td>
-                <td>5</td>
-                <td>1100</td>
-            </tr>
-            <tr>
-                <td>bot 2</td>
-                <td>15</td>
-                <td>10</td>
-                <td>6</td>
-                <td>950</td>
-            </tr>
-        </table>
-        <div class="gif-wrapper">
-            <img src="emotka.gif" alt="emotka.gif" width="200">
-        </div>
+        <footer class="footer">
+            <p>Stworzone przez Discord: TenGrubyTyp</p>
+            <p>&copy; 2024 Wszelkie prawa zastrzeżone.</p>
+        </footer>
     </div>
-    <footer class="footer">
-        <p>Stworzone przez Discord: TenGrubyTyp</p>
-        <p>&copy; 2024 Wszelkie prawa zastrzeżone.</p>
-    </footer>
 </body>
 </html>
